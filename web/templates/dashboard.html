@@ -1,0 +1,15 @@
+<h1>🚨 Security Alerts</h1>
+
+{% if alerts %}
+    <ul>
+    {% for alert in alerts %}
+        <li>
+            <strong>{{ alert.type }}</strong> |
+            IP: {{ alert.ip }} |
+            Time: {{ alert.time }}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No alerts yet...</p>
+{% endif %}
